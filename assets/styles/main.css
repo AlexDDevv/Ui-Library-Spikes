@@ -1,0 +1,6 @@
+.gradientText {
+    background: linear-gradient(to right, #FF7A00, #FF2900)
+}
+.gradientBorderPlatform {
+    background: linear-gradient(to right, #1D1D1D, #838383)
+}

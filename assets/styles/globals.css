@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --background: #1E1E1E;
+        --bgContainer: #0D0D0D;
+        --bgHero: #121212;
+        --card: #1B1B1B;
+        --btn: #1B1B1B;
+        --border: #1D1D1D;
+        --borderCard: #292929;
+        --borderBtn: #292929;
+        --designerLink: #DDDDDD;
+        --grayText: #7E7F81;
+        --whiteText: #FFFFFF;
+        --upgradeText: #FAFAFA;
+        --upgradeDots: #FF7A00;
+    }
+}
