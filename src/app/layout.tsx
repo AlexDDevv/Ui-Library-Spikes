@@ -1,5 +1,12 @@
+import type { Metadata } from "next";
 import "../../assets/styles/globals.css";
 import "../../assets/styles/main.css";
+
+export const metadata: Metadata = {
+    title: "UI Library components",
+    description:
+        "Réalisation du challenge UI Library components de la plateforme dev Spikes.",
+};
 
 export default function RootLayout({
     children,
@@ -9,6 +16,7 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body className="bg-background flex items-center justify-center pt-12">
+                <link rel="icon" href="/favicon.ico" sizes="any" />
                 {children}
             </body>
         </html>
