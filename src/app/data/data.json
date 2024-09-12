@@ -12,5 +12,56 @@
         {
             "content": "Membership"
         }
+    ],
+    "navBarLaterale": [
+        {
+            "title": "Platform",
+            "content": [
+                {
+                    "icon": "/logoWebflow.png",
+                    "name": "Webflow"
+                },
+                {
+                    "icon": "/logoFigma.png",
+                    "name": "Figma"
+                }
+            ]
+        },
+        {
+            "title": "Sections",
+            "content": [
+                {
+                    "name": "Hero"
+                },
+                {
+                    "name": "How it Works"
+                },
+                {
+                    "name": "Services"
+                },
+                {
+                    "name": "Testimonials"
+                },
+                {
+                    "name": "Pricing"
+                },
+                {
+                    "name": "FAQ"
+                },
+                {
+                    "name": "Footer"
+                }
+            ],
+            "more": "Show more +"
+        },
+        {
+            "title": "Style"
+        },
+        {
+            "title": "Saved"
+        },
+        {
+            "title": "Plan"
+        }
     ]
 }
