@@ -59,19 +59,19 @@ export default function NavBar() {
                     <div className="flex items-center justify-between mb-6">
                         <div className="flex items-center gap-x-2.5 cursor-pointer" onClick={() => toggleSection(index)}>
                             {getIconForSection(section.title)}
-                            <h2 className={`${openSection === index ? "text-white" : "text-grayText"} uppercase font-medium text-sm`}>
+                            <h2 className={`${openSection === index ? "text-white" : "text-grayText"} uppercase font-medium text-sm  transition-colors duration-200 ease-in-out hover:text-white`}>
                                 {section.title}
                             </h2>
                         </div>
                         {openSection === index ? (
                             <ChevronDown
                                 onClick={() => toggleSection(index)}
-                                className="text-grayText h-5 w-5 cursor-pointer"
+                                className="text-white h-5 w-5 cursor-pointer"
                             />
                         ) : (
                             <ChevronUp
                                 onClick={() => toggleSection(index)}
-                                className="text-grayText h-5 w-5 cursor-pointer"
+                                className="text-grayText h-5 w-5 cursor-pointer transition-colors duration-200 ease-in-out hover:text-white"
                             />
                         )}
                     </div>
@@ -91,7 +91,7 @@ export default function NavBar() {
                                         {index !== 0 && selectedContent === item.name && (
                                             <div className="h-1.5 w-1.5 rounded-full gradientDot"></div>
                                         )}
-                                        <h3 className={`text-sm ${selectedContent === item.name ? "text-white" : "text-grayText"}`} onClick={() => selectContent(item.name)}>
+                                        <h3 className={`text-sm ${selectedContent === item.name ? "text-white" : "text-grayText"} transition-colors duration-200 ease-in-out hover:text-white`} onClick={() => selectContent(item.name)}>
                                             {item.name}
                                         </h3>
                                     </div>
