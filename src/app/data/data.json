@@ -25,7 +25,8 @@
                     "icon": "/logoFigma.png",
                     "name": "Figma"
                 }
-            ]
+            ],
+            "isOpen": true
         },
         {
             "title": "Sections",
@@ -52,16 +53,20 @@
                     "name": "Footer"
                 }
             ],
+            "isOpen": true,
             "more": "Show more +"
         },
         {
-            "title": "Style"
+            "title": "Style",
+            "isOpen": false
         },
         {
-            "title": "Saved"
+            "title": "Saved",
+            "isOpen": false
         },
         {
-            "title": "Plan"
+            "title": "Plan",
+            "isOpen": false
         }
     ]
 }
