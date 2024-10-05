@@ -15,7 +15,7 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-            <body className="bg-background flex items-center justify-center pt-12">
+            <body className="bg-background">
                 <link rel="icon" href="/favicon.ico" sizes="any" />
                 {children}
             </body>
