@@ -9,6 +9,9 @@ import {
     Bookmark,
     Star,
 } from "lucide-react";
+import Image from "next/image";
+import btnDotLeft from "../../assets/img/btnDotLeft.svg"
+import btnDotRight from "../../assets/img/btnDotRight.svg"
 
 export default function NavBar() {
     const [selectedContent, setSelectedContent] = useState<{ [key: string]: string }>({
@@ -52,7 +55,7 @@ export default function NavBar() {
     };
 
     return (
-        <section className="flex flex-col gap-y-6 p-8 shadow-[inset_0_0_0_1px_#1D1D1D] max-w-[280px]">
+        <section className="flex flex-col gap-y-6 p-8 pb-28 shadow-[inset_0_0_0_1px_#1D1D1D] max-w-[280px]">
             {data.navBarLaterale.map((section, index) => (
                 <NavBarContent
                     key={section.title}
@@ -63,8 +66,19 @@ export default function NavBar() {
                     getIconForSection={getIconForSection}
                 />
             ))}
-            <button className="bg-card text-upgradeText text-xs font-medium h-8 rounded-md">
-                Upgrade to <span className="gradientText">Pro</span>
+            <button className="flex items-center justify-between bg-card text-upgradeText text-xs font-medium h-8 rounded-md">
+                <Image
+                    src={btnDotLeft}
+                    alt="Styled btn"
+                />
+                <p>
+                    Upgrade to
+                    <span className="gradientText ml-1">Pro</span>
+                </p>
+                <Image
+                    src={btnDotRight}
+                    alt="Styled btn"
+                />
             </button>
         </section>
     );
