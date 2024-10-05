@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import styled from 'styled-components';
 import { User, Search } from "lucide-react"
 import Image from 'next/image';
-import logo from "../../../assets/img/logo.png"
+import logo from "../../assets/img/logo.png"
 import data from "../data/data.json"
 
 const Li = styled.li<{ $selected?: string }>`
