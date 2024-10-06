@@ -68,5 +68,25 @@
             "title": "Plan",
             "isOpen": false
         }
+    ],
+    "articles": [
+        {
+            "date": "— Added 6th of Oct 2024"
+        },
+        {
+            "date": "— Added 5th of Oct 2024"
+        },
+        {
+            "date": "— Added 4th of Oct 2024"
+        },
+        {
+            "date": "— Added 3rd of Oct 2024"
+        },
+        {
+            "date": "— Added 2nd of Oct 2024"
+        },
+        {
+            "date": "— Added 1st of Oct 2024"
+        }
     ]
 }
