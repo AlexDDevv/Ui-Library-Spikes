@@ -19,7 +19,7 @@ export default function ContentSection() {
                 <h2 className="font-medium text-2xl text-white">Other sections you might like</h2>
                 <button className="bg-btn text-grayText font-medium text-xs px-2 py-2 rounded-md shadow-forCard">Browse All</button>
             </div>
-            <div className="gridTest gap-x-6 gap-y-10">
+            <div className="grid grid-cols-[repeat(auto-fit,_minmax(350px,_1fr))] gap-x-6 gap-y-10">
                 {data.articles.map((article, idx) => (
                     <article key={idx} className="">
                         <div className="w-full h-[217px] bg-card rounded-xl shadow-forCard mb-4"></div>
