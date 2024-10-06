@@ -24,7 +24,6 @@ const config: Config = {
             },
             boxShadow: {
                 "forCard": "inset 0 0 0 1px #292929",
-                "forBorder": "inset 0 0 0 1px #1D1D1D"
             }
         },
     },
