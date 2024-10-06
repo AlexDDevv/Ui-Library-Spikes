@@ -18,11 +18,11 @@
             "title": "Platform",
             "content": [
                 {
-                    "icon": "/logoWebflow.png",
+                    "icon": "/logoWebflow.svg",
                     "name": "Webflow"
                 },
                 {
-                    "icon": "/logoFigma.png",
+                    "icon": "/logoFigma.svg",
                     "name": "Figma"
                 }
             ],
