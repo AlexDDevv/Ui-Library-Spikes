@@ -2,13 +2,6 @@
 import React, { useState } from "react";
 import data from "../data/data.json";
 import NavBarContent from "./NavBarContent";
-import {
-    Zap,
-    LayoutGrid,
-    Sparkles,
-    Bookmark,
-    Star,
-} from "lucide-react";
 import Image from "next/image";
 import btnDotLeft from "../../assets/img/btnDotLeft.svg"
 import btnDotRight from "../../assets/img/btnDotRight.svg"
@@ -26,36 +19,8 @@ export default function NavBar() {
         }));
     };
 
-    const icons = [
-        {
-            icon: <Zap className="text-white h-4 w-4" />,
-            content: "Platform",
-        },
-        {
-            icon: <LayoutGrid className="text-white h-4 w-4" />,
-            content: "Sections",
-        },
-        {
-            icon: <Sparkles className="text-white h-4 w-4" />,
-            content: "Style",
-        },
-        {
-            icon: <Bookmark className="text-white h-4 w-4" />,
-            content: "Saved",
-        },
-        {
-            icon: <Star className="text-white h-4 w-4" />,
-            content: "Plan",
-        },
-    ];
-
-    const getIconForSection = (state: string) => {
-        const foundState = icons.find((item) => item.content === state);
-        return foundState ? foundState.icon : null;
-    };
-
     return (
-        <section className="flex flex-col gap-y-6 p-8 pb-28 shadow-forBorder max-w-[280px]">
+        <section className="flex flex-col gap-y-6 p-8 pb-28 shadow-forBorder w-[280px]">
             {data.navBarLaterale.map((section, index) => (
                 <NavBarContent
                     key={section.title}
@@ -63,7 +28,6 @@ export default function NavBar() {
                     index={index}
                     selectedContent={selectedContent[section.title]}
                     selectContent={(content) => selectContent(section.title, content)}
-                    getIconForSection={getIconForSection}
                 />
             ))}
             <button className="flex items-center justify-between bg-card text-upgradeText text-xs font-medium h-8 rounded-md">
