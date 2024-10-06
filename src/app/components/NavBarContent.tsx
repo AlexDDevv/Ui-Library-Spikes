@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Image from "next/image";
-import { ChevronDown, ChevronUp } from "lucide-react";
+import { ChevronDown, ChevronUp, Zap, LayoutGrid, Sparkles, Bookmark, Star, } from "lucide-react";
 
 type SectionContent = {
     icon?: string;
@@ -18,7 +18,7 @@ type NavBarSectionProps = {
     index: number;
     selectedContent: string;
     selectContent: (content: string) => void;
-    getIconForSection: (state: string) => JSX.Element | null;
+    // getIconForSection: (state: string) => JSX.Element | null;
 };
 
 export default function NavBarContent({
@@ -26,12 +26,40 @@ export default function NavBarContent({
     index,
     selectedContent,
     selectContent,
-    getIconForSection,
+    // getIconForSection,
 }: NavBarSectionProps) {
     const [isOpen, setIsOpen] = useState<boolean>(section.isOpen);
 
     const handleToggle = () => {
         setIsOpen((prev) => !prev);
+    };
+
+    const icons = [
+        {
+            icon: <Zap className={`h-4 w-4 ${isOpen ? "text-white" : "text-grayText"}`} />,
+            content: "Platform",
+        },
+        {
+            icon: <LayoutGrid className={`h-4 w-4 ${isOpen ? "text-white" : "text-grayText"}`} />,
+            content: "Sections",
+        },
+        {
+            icon: <Sparkles className={`h-4 w-4 ${isOpen ? "text-white" : "text-grayText"}`} />,
+            content: "Style",
+        },
+        {
+            icon: <Bookmark className={`h-4 w-4 ${isOpen ? "text-white" : "text-grayText"}`} />,
+            content: "Saved",
+        },
+        {
+            icon: <Star className={`h-4 w-4 ${isOpen ? "text-white" : "text-grayText"}`} />,
+            content: "Plan",
+        },
+    ];
+
+    const getIconForSection = (state: string) => {
+        const foundState = icons.find((item) => item.content === state);
+        return foundState ? foundState.icon : null;
     };
 
     return (
