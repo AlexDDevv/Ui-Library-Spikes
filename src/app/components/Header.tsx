@@ -1,30 +1,20 @@
 "use client"
 import React, { useState } from 'react'
-import styled from 'styled-components';
 import { User, Search } from "lucide-react"
 import Image from 'next/image';
 import logo from "../../assets/img/logo.png"
 import data from "../data/data.json"
-
-const Li = styled.li<{ $selected?: string }>`
-    font-size: 14px;
-    color: ${props => props.$selected || "#7E7F81"};
-    cursor: pointer;
-    transition: color 0.2s ease-in-out;
-    &:hover {
-        color: white
-    };
-`
+import Link from 'next/link';
 
 export default function Header() {
-    const [selectedLi, setSelectedLi] = useState<string>("Library")
+    const [selectedLink, setSelectedLink] = useState<string>("")
 
-    const selectNavLi = (content: string) => {
-        setSelectedLi(content)
+    const selectNavLink = (content: string) => {
+        setSelectedLink(content)
     }
 
     return (
-        <div className='flex items-center justify-between gap-x-5 px-8 py-6 w-full'>
+        <header className='bg-bgContainer flex items-center justify-between gap-x-5 px-8 py-6 w-full border-b-2 border-border'>
             <div className='cursor-pointer'>
                 <Image
                     src={logo}
@@ -34,13 +24,13 @@ export default function Header() {
             <div className='w-[1px] h-6 bg-border'></div>
             <nav>
                 <ul className='flex items-center gap-x-8'>
-                    {data.navLi.map(item => (
-                        <Li
+                    {data.navLink.map(item => (
+                        <Link href={item.href}
                             key={item.content}
-                            $selected={`${selectedLi === item.content ? "#ffffff" : "#7E7F81"}`}
-                            onClick={() => selectNavLi(item.content)}
+                            className={`${selectedLink === item.content ? "text-white" : "text-grayText"} text-sm transition-colors duration-200 ease-in-out cursor-pointer hover:text-white`}
+                            onClick={() => selectNavLink(item.content)}
                         >{item.content}
-                        </Li>
+                        </Link>
                     ))}
                 </ul>
             </nav>
@@ -59,6 +49,6 @@ export default function Header() {
             <div className='bg-bgHero h-8 w-8 rounded-md shadow-forBorder flex items-center justify-center cursor-pointer'>
                 <User className='text-white h-4 w-4' />
             </div>
-        </div>
+        </header>
     )
 }
