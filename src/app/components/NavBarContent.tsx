@@ -18,7 +18,6 @@ type NavBarSectionProps = {
     index: number;
     selectedContent: string;
     selectContent: (content: string) => void;
-    // getIconForSection: (state: string) => JSX.Element | null;
 };
 
 export default function NavBarContent({
@@ -26,7 +25,6 @@ export default function NavBarContent({
     index,
     selectedContent,
     selectContent,
-    // getIconForSection,
 }: NavBarSectionProps) {
     const [isOpen, setIsOpen] = useState<boolean>(section.isOpen);
 
