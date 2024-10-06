@@ -22,6 +22,9 @@ const config: Config = {
                 upgradeText: "var(--upgradeText)",
                 upgradeDots: "var(--upgradeDots)",
             },
+            boxShadow: {
+                "custom": "inset 0 0 0 1px #292929"
+            }
         },
     },
     plugins: [],
