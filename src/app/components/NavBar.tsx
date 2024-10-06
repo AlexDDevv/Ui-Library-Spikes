@@ -55,7 +55,7 @@ export default function NavBar() {
     };
 
     return (
-        <section className="flex flex-col gap-y-6 p-8 pb-28 shadow-[inset_0_0_0_1px_#1D1D1D] max-w-[280px]">
+        <section className="flex flex-col gap-y-6 p-8 pb-28 shadow-forBorder max-w-[280px]">
             {data.navBarLaterale.map((section, index) => (
                 <NavBarContent
                     key={section.title}
