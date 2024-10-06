@@ -1,16 +1,20 @@
 {
-    "navLi": [
+    "navLink": [
         {
-            "content": "Library"
+            "content": "Library",
+            "href": "/library"
         },
         {
-            "content": "Extensions"
+            "content": "Extensions",
+            "href": "/extensions"
         },
         {
-            "content": "Community"
+            "content": "Community",
+            "href": "/community"
         },
         {
-            "content": "Membership"
+            "content": "Membership",
+            "href": "/membership"
         }
     ],
     "navBarLaterale": [
