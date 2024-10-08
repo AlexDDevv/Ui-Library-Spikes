@@ -1,34 +1,29 @@
 "use client"
-import React, { useState } from 'react'
 import { User, Search } from "lucide-react"
 import Image from 'next/image';
 import logo from "../../assets/img/logo.png"
 import data from "../data/data.json"
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 export default function Header() {
-    const [selectedLink, setSelectedLink] = useState<string>("")
-
-    const selectNavLink = (content: string) => {
-        setSelectedLink(content)
-    }
+    const pathname = usePathname();
 
     return (
         <header className='bg-bgContainer flex items-center justify-between gap-x-5 px-8 py-6 w-full border-b-2 border-border'>
-            <div className='cursor-pointer'>
+            <Link href={"/"} className='cursor-pointer'>
                 <Image
                     src={logo}
                     alt='Logo de la marque'
                 />
-            </div>
+            </Link>
             <div className='w-[1px] h-6 bg-border'></div>
             <nav>
                 <ul className='flex items-center gap-x-8'>
                     {data.navLink.map(item => (
                         <Link href={item.href}
                             key={item.content}
-                            className={`${selectedLink === item.content ? "text-white" : "text-grayText"} text-sm transition-colors duration-200 ease-in-out cursor-pointer hover:text-white`}
-                            onClick={() => selectNavLink(item.content)}
+                            className={`${pathname === item.href ? "text-white" : "text-grayText"} text-sm transition-colors duration-200 ease-in-out cursor-pointer hover:text-white`}
                         >{item.content}
                         </Link>
                     ))}
