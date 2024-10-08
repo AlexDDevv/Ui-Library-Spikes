@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Header from "./components/Header";
+import NavBar from "./components/NavBar";
 import "../assets/styles/globals.css";
 import "../assets/styles/main.css";
 
@@ -19,7 +20,10 @@ export default function RootLayout({
             <body className="bg-background">
                 <link rel="icon" href="/favicon.ico" sizes="any" />
                 <Header />
-                {children}
+                <main className="flex">
+                    <NavBar />
+                    {children}
+                </main>
             </body>
         </html>
     );
