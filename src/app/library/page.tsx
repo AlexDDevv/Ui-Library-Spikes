@@ -8,7 +8,7 @@ import ContentSection from "../components/ContentSection";
 
 export default function Home() {
     return (
-        <main>
+        <main className="flex">
             <NavBar />
             <div className="bg-bgHero w-full p-8 gap-y-8">
                 <section className="flex gap-8 h-[388px] border-b border-border pb-8 mb-8">
