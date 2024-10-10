@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import { ChevronDown, ChevronUp, Zap, LayoutGrid, Sparkles, Bookmark, Star, } from "lucide-react";
+import { usePathname } from "next/navigation";
 
 type SectionContent = {
     icon?: string;
@@ -27,6 +28,16 @@ export default function NavBarContent({
     selectContent,
 }: NavBarSectionProps) {
     const [isOpen, setIsOpen] = useState<boolean>(section.isOpen);
+
+    const pathname = usePathname()
+
+    useEffect(() => {
+        if (pathname !== "/library") {
+            setIsOpen(false);
+        } else {
+            setIsOpen(section.isOpen)
+        }
+    }, [pathname]);
 
     const handleToggle = () => {
         setIsOpen((prev) => !prev);
