@@ -1,7 +1,7 @@
 "use client"
 import { User, Search } from "lucide-react"
 import Image from 'next/image';
-import logo from "../../assets/img/logo.png"
+import logo from "../../assets/img/logo.svg"
 import data from "../data/data.json"
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
