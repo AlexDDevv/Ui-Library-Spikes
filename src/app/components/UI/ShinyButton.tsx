@@ -1,5 +1,5 @@
 "use client";
-import { useRouter } from "next/navigation";
+import { useRouter, usePathname } from "next/navigation";
 import { type AnimationProps, motion } from "framer-motion";
 
 const animationProps = {
@@ -29,6 +29,7 @@ interface shinyButtonProps {
 
 const ShinyButton = ({ text }: shinyButtonProps) => {
     const router = useRouter()
+    const pathname = usePathname()
 
     const redirectToLibrary = () => {
         router.push("/library")
@@ -37,11 +38,11 @@ const ShinyButton = ({ text }: shinyButtonProps) => {
     return (
         <motion.button
             {...animationProps}
-            className="relative rounded-lg px-6 py-2.5 font-medium backdrop-blur-xl shadow-forCard bg-btn z-50"
+            className={`relative ${pathname === "/membership" ? "px-2 py-1 rounded-md" : "px-6 py-2.5 rounded-lg"} font-medium backdrop-blur-xl shadow-forCard bg-btn z-50`}
             onClick={redirectToLibrary}
         >
             <span
-                className="relative block h-full w-full text-sm uppercase tracking-wide text-white"
+                className={`relative block h-full w-full ${pathname === "/membership" ? "text-xs normal-case text-grayText" : "text-sm uppercase text-white"} tracking-wide`}
                 style={{
                     maskImage:
                         "linear-gradient(-75deg,#292929 calc(var(--x) + 20%),transparent calc(var(--x) + 30%),#1B1B1B calc(var(--x) + 100%))",
