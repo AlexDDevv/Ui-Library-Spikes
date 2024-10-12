@@ -32,7 +32,11 @@ const ShinyButton = ({ text }: shinyButtonProps) => {
     const pathname = usePathname()
 
     const redirectToLibrary = () => {
-        router.push("/library")
+        if (pathname === "/membership") {
+            return
+        } else {
+            router.push("/library")
+        }
     }
 
     return (
