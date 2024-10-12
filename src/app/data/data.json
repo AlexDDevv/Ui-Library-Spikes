@@ -92,5 +92,44 @@
         {
             "date": "— Added 1st of Oct 2024"
         }
+    ],
+    "pricing": [
+        {
+            "plan": "Free plan",
+            "price": 0,
+            "avantages": [
+                "Access to Community",
+                "Basic Component Library",
+                "Monthly Updates",
+                "Community Support",
+                "Basic Extensions"
+            ]
+        },
+        {
+            "plan": "Starter plan",
+            "price": 19,
+            "avantages": [
+                "Everything in Free",
+                "Extended Component Library",
+                "Bi-Weekly Updates",
+                "Email Support",
+                "Advanced Extensions",
+                "Analytics Dashboard",
+                "Beginner Courses"
+            ]
+        },
+        {
+            "plan": "Pro plan",
+            "price": 49,
+            "avantages": [
+                "Everything in Starter",
+                "Complete Component Library",
+                "Weekly Updates",
+                "Pro Extensions",
+                "Priority Support",
+                "1:1 Expert Sessions",
+                "Team Collaboration"
+            ]
+        }
     ]
 }
