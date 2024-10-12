@@ -107,6 +107,7 @@
         },
         {
             "plan": "Starter plan",
+            "best": "Best Offer",
             "price": 19,
             "avantages": [
                 "Everything in Free",
