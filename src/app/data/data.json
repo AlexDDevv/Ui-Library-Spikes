@@ -132,5 +132,19 @@
                 "Team Collaboration"
             ]
         }
+    ],
+    "extensions": [
+        {
+            "title": "Task Automation Tool",
+            "text": "Automate repetitive tasks like deployments and testing."
+        },
+        {
+            "title": "Dark Mode Toggle",
+            "text": "Easily integrate a dark mode toggle into your UI."
+        },
+        {
+            "title": "Real-Time Performance Analyzer",
+            "text": "Identify bottlenecks, and fine-tune for optimal results."
+        }
     ]
 }
