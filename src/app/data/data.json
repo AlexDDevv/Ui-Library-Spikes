@@ -133,6 +133,20 @@
             ]
         }
     ],
+    "community": [
+        {
+            "title": "Free Discord Access",
+            "text": "Connect with developers for support and collaboration."
+        },
+        {
+            "title": "Open-Source Projects",
+            "text": "Contribute and learn with community-driven projects."
+        },
+        {
+            "title": "Learning Resources",
+            "text": "Access tutorials and coding challenges for free."
+        }
+    ],
     "extensions": [
         {
             "title": "Task Automation Tool",
