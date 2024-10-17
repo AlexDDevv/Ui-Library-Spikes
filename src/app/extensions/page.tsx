@@ -3,7 +3,7 @@ import NavBar from "../components/NavBar";
 import extensionImg from "../../assets/img/extension.svg"
 import Image from 'next/image';
 import data from "../data/data.json"
-import ExtensionContent from '../components/ExtensionContent';
+import ArticlesContent from '../components/ArticlesContent';
 
 export default function page() {
     return (
@@ -31,7 +31,7 @@ export default function page() {
                     <h2 className='font-semibold text-white text-2xl mb-10'>Available extensions</h2>
                     <div className='grid grid-cols-[repeat(auto-fit,_minmax(300px,_1fr))] gap-x-6 gap-y-10'>
                         {data.extensions.map(item => (
-                            <ExtensionContent
+                            <ArticlesContent
                                 key={item.title}
                                 title={item.title}
                                 text={item.text}
