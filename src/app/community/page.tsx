@@ -25,7 +25,7 @@ export default function page() {
                     </div>
                 </div>
                 <section>
-                    <h2 className='font-semibold text-white text-2xl mb-20'>Benefits of community</h2>
+                    <h2 className='font-semibold text-white text-2xl mb-10'>Benefits of community</h2>
                     <div className='grid grid-cols-[repeat(auto-fit,_minmax(300px,_1fr))] gap-x-6 gap-y-10'>
                         {data.community.map(item => (
                             <ArticlesContent

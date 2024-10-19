@@ -27,7 +27,7 @@ export default function page() {
                     </div>
                 </div>
                 <section>
-                    <h2 className='font-semibold text-white text-2xl mb-20'>Princing plans</h2>
+                    <h2 className='font-semibold text-white text-2xl mb-10'>Princing plans</h2>
                     <div className='flex justify-between gap-10 flex-wrap'>
                         {data.pricing.map(item => (
                             <PrincingPlan
