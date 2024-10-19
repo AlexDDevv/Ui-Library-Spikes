@@ -23,8 +23,22 @@ const config: Config = {
                 upgradeDots: "var(--upgradeDots)",
             },
             boxShadow: {
-                "forCard": "inset 0 0 0 1px #292929",
-            }
+                forCard: "inset 0 0 0 1px #292929",
+            },
+            animation: {
+                marquee: "marquee var(--duration) linear infinite",
+                "marquee-vertical": "marquee-vertical var(--duration) linear infinite",
+            },
+            keyframes: {
+                marquee: {
+                    from: { transform: "translateX(0)" },
+                    to: { transform: "translateX(calc(-100% - var(--gap)))" },
+                },
+                "marquee-vertical": {
+                    from: { transform: "translateY(0)" },
+                    to: { transform: "translateY(calc(-100% - var(--gap)))" },
+                },
+            },
         },
     },
     plugins: [],
