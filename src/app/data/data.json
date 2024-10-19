@@ -93,6 +93,66 @@
             "date": "— Added 1st of Oct 2024"
         }
     ],
+    "extensions": [
+        {
+            "title": "Task Automation Tool",
+            "text": "Automate repetitive tasks like deployments and testing."
+        },
+        {
+            "title": "Dark Mode Toggle",
+            "text": "Easily integrate a dark mode toggle into your UI."
+        },
+        {
+            "title": "Real-Time Performance Analyzer",
+            "text": "Identify bottlenecks, and fine-tune for optimal results."
+        }
+    ],
+    "community": [
+        {
+            "title": "Free Discord Access",
+            "text": "Connect with developers for support and collaboration."
+        },
+        {
+            "title": "Open-Source Projects",
+            "text": "Contribute and learn with community-driven projects."
+        },
+        {
+            "title": "Learning Resources",
+            "text": "Access tutorials and coding challenges for free."
+        }
+    ],
+    "marquee": [
+        {
+            "name": "Jack",
+            "username": "@jack",
+            "body": "The user experience on this platform is seamless. I can tell a lot of thought went into the design and functionality. Amazing job!",
+            "img": "/jack.jpg"
+        },
+        {
+            "name": "Jill",
+            "username": "@jill",
+            "body": "As a developer, I appreciate how intuitive the API is. It made integrating with our app incredibly easy. Keep up the great work!",
+            "img": "/jill.jpg"
+        },
+        {
+            "name": "John",
+            "username": "@john",
+            "body": "The responsiveness across devices is flawless. Whether I'm on mobile or desktop, the platform works like a charm!",
+            "img": "/john.jpg"
+        },
+        {
+            "name": "Jane",
+            "username": "@jane",
+            "body": "I love how the system scales with traffic without a hitch. It's clear that scalability was a priority here, and it shows.",
+            "img": "/jane.jpg"
+        },
+        {
+            "name": "Jenny",
+            "username": "@jenny",
+            "body": "The support team is fantastic! They helped us resolve an issue in no time. It's rare to see such dedication these days.",
+            "img": "/jenny.jpg"
+        }
+    ],
     "pricing": [
         {
             "plan": "Free plan",
@@ -131,34 +191,6 @@
                 "1:1 Expert Sessions",
                 "Team Collaboration"
             ]
-        }
-    ],
-    "community": [
-        {
-            "title": "Free Discord Access",
-            "text": "Connect with developers for support and collaboration."
-        },
-        {
-            "title": "Open-Source Projects",
-            "text": "Contribute and learn with community-driven projects."
-        },
-        {
-            "title": "Learning Resources",
-            "text": "Access tutorials and coding challenges for free."
-        }
-    ],
-    "extensions": [
-        {
-            "title": "Task Automation Tool",
-            "text": "Automate repetitive tasks like deployments and testing."
-        },
-        {
-            "title": "Dark Mode Toggle",
-            "text": "Easily integrate a dark mode toggle into your UI."
-        },
-        {
-            "title": "Real-Time Performance Analyzer",
-            "text": "Identify bottlenecks, and fine-tune for optimal results."
         }
     ]
 }
