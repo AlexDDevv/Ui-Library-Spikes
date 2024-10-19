@@ -16,5 +16,8 @@
         --whiteText: #FFFFFF;
         --upgradeText: #FAFAFA;
         --upgradeDots: #FF7A00;
+        --radius: 0.5rem;
+        --duration: 40s;
+        --gap: 20px
     }
 }
