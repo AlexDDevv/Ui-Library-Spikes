@@ -24,6 +24,7 @@ const config: Config = {
             },
             boxShadow: {
                 forCard: "inset 0 0 0 1px #292929",
+                forCardHover: "inset 0 0 0 1px #ffffff33"
             },
             animation: {
                 marquee: "marquee var(--duration) linear infinite",
