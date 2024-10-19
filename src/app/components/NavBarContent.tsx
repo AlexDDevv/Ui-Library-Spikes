@@ -45,23 +45,23 @@ export default function NavBarContent({
 
     const icons = [
         {
-            icon: <Zap className={`h-4 w-4 ${isOpen ? "text-white" : "text-grayText"}`} />,
+            icon: <Zap className={`h-4 w-4 ${isOpen ? "text-white" : "text-grayText"} transition-colors duration-200 ease-in-out group-hover:text-white`} />,
             content: "Platform",
         },
         {
-            icon: <LayoutGrid className={`h-4 w-4 ${isOpen ? "text-white" : "text-grayText"}`} />,
+            icon: <LayoutGrid className={`h-4 w-4 ${isOpen ? "text-white" : "text-grayText"} transition-colors duration-200 ease-in-out group-hover:text-white`} />,
             content: "Sections",
         },
         {
-            icon: <Sparkles className={`h-4 w-4 ${isOpen ? "text-white" : "text-grayText"}`} />,
+            icon: <Sparkles className={`h-4 w-4 ${isOpen ? "text-white" : "text-grayText"} transition-colors duration-200 ease-in-out group-hover:text-white`} />,
             content: "Style",
         },
         {
-            icon: <Bookmark className={`h-4 w-4 ${isOpen ? "text-white" : "text-grayText"}`} />,
+            icon: <Bookmark className={`h-4 w-4 ${isOpen ? "text-white" : "text-grayText"} transition-colors duration-200 ease-in-out group-hover:text-white`} />,
             content: "Saved",
         },
         {
-            icon: <Star className={`h-4 w-4 ${isOpen ? "text-white" : "text-grayText"}`} />,
+            icon: <Star className={`h-4 w-4 ${isOpen ? "text-white" : "text-grayText"} transition-colors duration-200 ease-in-out group-hover:text-white`} />,
             content: "Plan",
         },
     ];
@@ -73,7 +73,7 @@ export default function NavBarContent({
 
     return (
         <div key={section.title} className="border-b border-dashed border-border">
-            <div className="flex items-center justify-between mb-6">
+            <div className="flex items-center justify-between mb-6 group">
                 <div
                     className="flex items-center gap-x-2.5 cursor-pointer"
                     onClick={handleToggle}
@@ -81,7 +81,7 @@ export default function NavBarContent({
                     {getIconForSection(section.title)}
                     <h2
                         className={`${isOpen ? "text-white" : "text-grayText"
-                            } uppercase font-medium text-sm transition-colors duration-200 ease-in-out hover:text-white`}
+                            } uppercase font-medium text-sm transition-colors duration-200 ease-in-out group-hover:text-white`}
                     >
                         {section.title}
                     </h2>
@@ -94,7 +94,7 @@ export default function NavBarContent({
                 ) : (
                     <ChevronUp
                         onClick={handleToggle}
-                        className="text-grayText h-5 w-5 cursor-pointer transition-colors duration-200 ease-in-out hover:text-white"
+                        className="text-grayText h-5 w-5 cursor-pointer transition-colors duration-200 ease-in-out group-hover:text-white"
                     />
                 )}
             </div>
@@ -121,7 +121,7 @@ export default function NavBarContent({
                                     className={`text-sm ${selectedContent === item.name
                                         ? "text-white"
                                         : "text-grayText"
-                                        } transition-colors duration-200 ease-in-out hover:text-white`}
+                                        } transition-colors duration-200 ease-in-out group-hover:text-white hover:text-white`}
                                     onClick={() => selectContent(item.name)}
                                 >
                                     {item.name}
