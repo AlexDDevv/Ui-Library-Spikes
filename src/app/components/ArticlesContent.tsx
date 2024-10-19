@@ -79,7 +79,7 @@ export default function ArticlesContent({ title, text }: ExtensionType) {
 
     return (
         <article
-            className='bg-bgContainer rounded-xl shadow-forCard p-4 relative min-h-[200px] cursor-pointer group'
+            className='bg-bgContainer rounded-xl shadow-forCard p-4 relative min-h-[200px] cursor-pointer transition-shadow duration-200 ease-in-out hover:shadow-forCardHover group'
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
         >
