@@ -30,7 +30,7 @@ export default function Header() {
                 </ul>
             </nav>
             <div className='w-[1px] h-6 bg-border'></div>
-            <div className='bg-bgHero max-w-[680px] w-9/12 flex items-center py-2.5 px-4 rounded-md shadow-forBorder gap-x-3'>
+            <div className='bg-bgHero max-w-[680px] w-9/12 flex items-center py-2.5 px-4 rounded-md shadow-forCard gap-x-3'>
                 <Search className='h-4 w-4 text-grayText cursor-pointer' />
                 <input
                     type="text"
@@ -41,7 +41,7 @@ export default function Header() {
                 />
             </div>
             <div className='w-[1px] h-6 bg-border'></div>
-            <div className='bg-bgHero h-8 w-8 rounded-md shadow-forBorder flex items-center justify-center cursor-pointer'>
+            <div className='bg-bgHero h-8 w-8 rounded-md shadow-forCard flex items-center justify-center cursor-pointer'>
                 <User className='text-white h-4 w-4' />
             </div>
         </header>
