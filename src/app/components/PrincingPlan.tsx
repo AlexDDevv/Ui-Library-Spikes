@@ -25,7 +25,7 @@ export default function PrincingPlan({ plan, best, price, avantages }: PrincingP
                     <h4 className='font-medium text-white text-4xl'>${price}</h4>
                     <p className='text-white'>/ month</p>
                 </div>
-                <button className='bg-btn text-white font-medium w-full rounded-md px-2 py-2 h-10 shadow-forCard'>Get started</button>
+                <button className='bg-btn text-white font-medium w-full rounded-md px-2 py-2 h-10 shadow-forCard transition-colors duration-200 ease-in-out hover:bg-[rgba(27,27,27,0.5)]'>Get started</button>
             </div>
             <div>
                 <ul className='pl-6'>

@@ -22,14 +22,14 @@ export default function Home() {
                         </div>
                         <div>
                             <div className="flex gap-x-4 mb-4">
-                                <button className="bg-btn text-white font-medium text-xs w-1/2 rounded-md px-2 py-2 h-12 shadow-forCard flex items-center justify-center gap-x-3">
+                                <button className="bg-btn text-white font-medium text-xs w-1/2 rounded-md px-2 py-2 h-12 shadow-forCard flex items-center justify-center gap-x-3 transition-colors duration-200 ease-in-out hover:bg-[rgba(27,27,27,0.5)]">
                                     <Image
                                         src={logoWebflow}
                                         alt="Logo de la plateforme Webflow"
                                     />
                                     Copy to Webflow
                                 </button>
-                                <button className="bg-btn text-white font-medium text-xs w-1/2 rounded-md px-2 py-2 h-12 shadow-forCard flex items-center justify-center gap-x-3">
+                                <button className="bg-btn text-white font-medium text-xs w-1/2 rounded-md px-2 py-2 h-12 shadow-forCard flex items-center justify-center gap-x-3 transition-colors duration-200 ease-in-out hover:bg-[rgba(27,27,27,0.5)]">
                                     <Image
                                         src={logoFigma}
                                         alt="Logo de la plateforme Figma"
@@ -37,7 +37,7 @@ export default function Home() {
                                     Copy to Figma
                                 </button>
                             </div>
-                            <button className="bg-btn text-white font-medium text-xs w-full rounded-md px-2 py-2 h-12 shadow-forCard flex items-center justify-center gap-x-3">
+                            <button className="bg-btn text-white font-medium text-xs w-full rounded-md px-2 py-2 h-12 shadow-forCard flex items-center justify-center gap-x-3 transition-colors duration-200 ease-in-out hover:bg-[rgba(27,27,27,0.5)]">
                                 <Eye />
                                 Live Preview
                             </button>
