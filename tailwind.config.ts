@@ -40,6 +40,9 @@ const config: Config = {
                     to: { transform: "translateY(calc(-100% - var(--gap)))" },
                 },
             },
+            screens: {
+                "mobile": "475px"
+            }
         },
     },
     plugins: [],
