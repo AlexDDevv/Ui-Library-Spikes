@@ -18,13 +18,13 @@ export default function Header() {
     };
 
     return (
-        <header className="bg-bgContainer flex items-center justify-between gap-x-5 px-8 py-6 w-full border-b-2 border-border relative">
-            <Link href={"/"} className="cursor-pointer">
+        <header className="bg-bgContainer flex items-center justify-between gap-x-5 px-8 py-6 w-full border-b-2 border-border relative max-sm:px-5 max-sm:py-4">
+            <Link href={"/"} className="cursor-pointer min-w-24 max-sm:min-w-14">
                 <Image src={logo} alt="Logo de la marque" />
             </Link>
-            <div className="w-[1px] h-6 bg-border"></div>
+            <div className="w-[1px] h-6 bg-border max-lg:hidden"></div>
             <nav>
-                <ul className="flex items-center gap-x-8">
+                <ul className="flex items-center gap-x-8 max-sm:gap-x-5">
                     {data.navLink.map((item) => (
                         <Link
                             href={item.href}
@@ -32,30 +32,30 @@ export default function Header() {
                             className={`${pathname === item.href
                                 ? "text-white"
                                 : "text-grayText"
-                                } text-sm transition-colors duration-200 ease-in-out cursor-pointer hover:text-white`}
+                                } text-sm transition-colors duration-200 ease-in-out cursor-pointer hover:text-white max-sm:text-xs max-mobile:text-[10px]`}
                         >
                             {item.content}
                         </Link>
                     ))}
                 </ul>
             </nav>
-            <div className="w-[1px] h-6 bg-border"></div>
-            <div className="bg-bgHero max-w-[680px] w-9/12 flex items-center py-2.5 px-4 rounded-md shadow-forCard gap-x-3">
+            <div className="w-[1px] h-6 bg-border max-lg:hidden"></div>
+            <div className="bg-bgHero max-w-[680px] w-9/12 flex items-center py-2.5 px-4 rounded-md shadow-forCard gap-x-3 max-lg:hidden">
                 <Search className="h-4 w-4 text-grayText cursor-pointer" />
                 <input
                     type="text"
                     id="search"
                     name="seach"
                     placeholder="Search for specific components, sections, wireframes, and more..."
-                    className="bg-transparent w-full text-grayText text-xs outline-none placeholder:text-grayText"
+                    className="bg-transparent w-full text-grayText text-xs outline-none placeholder:text-grayText placeholder-shown:text-ellipsis"
                 />
             </div>
-            <div className="w-[1px] h-6 bg-border"></div>
+            <div className="w-[1px] h-6 bg-border max-lg:hidden max-"></div>
             <div
-                className="bg-bgHero h-8 w-8 rounded-md shadow-forCard flex items-center justify-center cursor-pointer transition-shadow duration-200 ease-in-out hover:shadow-forCardHover z-[230]"
+                className="bg-bgHero h-8 w-8 min-w-8 rounded-md shadow-forCard flex items-center justify-center cursor-pointer transition-shadow duration-200 ease-in-out hover:shadow-forCardHover z-[230] max-sm:h-6 max-sm:min-w-6 max-sm:w-6"
                 onClick={handleShowMenu}
             >
-                <User className="text-white h-4 w-4" />
+                <User className="text-white h-4 w-4 max-sm:h-3 max-sm:w-3" />
             </div>
             <AnimatePresence>
                 {showMenu && <UserMenu showMenu={showMenu} />}
