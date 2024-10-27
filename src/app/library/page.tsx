@@ -10,9 +10,9 @@ export default function Home() {
     return (
         <main className="flex max-sm:flex-col">
             <NavBar />
-            <div className="bg-bgHero w-full p-8 max-md:p-7">
+            <div className="bg-bgHero w-full p-8 gap-y-8 max-md:p-7 max-md:gap-y-7">
                 <section className="flex gap-8 h-[388px] border-b border-border pb-8 mb-8 max-lg:h-auto max-md:pb-7 max-md:mb-7">
-                    <div className="w-1/2 h-full flex flex-col justify-between max-lg:w-full max-lg:gap-8">
+                    <div className="w-1/2 h-full flex flex-col justify-between max-lg:w-full max-lg:gap-8 max-md:gap-7">
                         <div>
                             <div className="flex items-center gap-x-4 mb-6">
                                 <h1 className="font-medium text-2xl text-white max-md:text-xl">Hero section</h1>
