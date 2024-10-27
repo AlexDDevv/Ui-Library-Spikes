@@ -6,12 +6,12 @@ import PrincingPlan from '../components/PrincingPlan';
 
 export default function page() {
     return (
-        <main className='flex'>
+        <main className='flex max-sm:flex-col'>
             <NavBar />
-            <section className='bg-bgHero w-full p-8 overflow-hidden'>
-                <div className='flex gap-8 h-[388px] border-b border-border mb-8 pb-8'>
-                    <div className='w-1/2'>
-                        <h1 className='font-semibold gradientText text-4xl mb-5'>
+            <section className='bg-bgHero w-full p-8 overflow-hidden max-md:p-7'>
+                <div className='flex gap-8 border-b border-border mb-8 pb-8 max-lg:flex-col max-md:mb-7 max-md:pb-7 max-md:gap-7'>
+                    <div className='w-1/2 max-lg:w-full'>
+                        <h1 className='font-semibold gradientText text-4xl mb-5 max-lg:text-3xl'>
                             Rise your level
                         </h1>
                         <div className='flex flex-col gap-y-3'>
@@ -20,8 +20,8 @@ export default function page() {
                             <p className='text-sm text-grayText max-w-[500px] leading-relaxed'> Whether you're a beginner or a pro, our platform helps you save time and build better, faster!</p>
                         </div>
                     </div>
-                    <div className="flex items-center justify-center w-1/2 bg-bgContainer rounded-xl h-full border-2 border-border overflow-x-hidden py-6 relative">
-                        <Marquee reverse />
+                    <div className="flex items-center justify-center w-1/2 h-72 bg-bgContainer rounded-xl border-2 border-border overflow-x-hidden py-6 relative max-lg:w-full max-lg:h-auto">
+                        <Marquee />
                         <div className="pointer-events-none absolute inset-y-0 left-0 w-5 bg-gradient-to-r from-bgContainer"></div>
                         <div className="pointer-events-none absolute inset-y-0 right-0 w-5 bg-gradient-to-l from-bgContainer"></div>
                     </div>
