@@ -14,20 +14,20 @@ export default function ContentSection() {
     };
 
     return (
-        <section className="pb-8">
-            <div className="flex items-center justify-between mb-10">
-                <h2 className="font-medium text-2xl text-white">Other sections you might like</h2>
+        <section>
+            <div className="flex items-center justify-between mb-10 max-mobile:flex-col max-mobile:gap-7">
+                <h2 className="font-medium text-2xl text-white max-md:text-xl">Other sections you might like</h2>
                 <button className="bg-btn text-grayText font-medium text-xs px-2 py-2 rounded-md shadow-forCard">Browse All</button>
             </div>
-            <div className="grid grid-cols-[repeat(auto-fit,_minmax(350px,_1fr))] gap-x-6 gap-y-10">
+            <div className="grid grid-cols-[repeat(auto-fit,_minmax(350px,_1fr))] gap-x-6 gap-y-10 max-md:grid-cols-[repeat(auto-fit,_minmax(300px,_1fr))]">
                 {data.articles.map((article, idx) => (
-                    <article key={idx} className="">
-                        <div className="w-full h-[217px] bg-card rounded-xl shadow-forCard mb-4"></div>
+                    <article key={idx}>
+                        <div className="w-full h-[217px] bg-card rounded-xl shadow-forCard mb-4 max-mobile:h-48"></div>
                         <div>
                             <div className="flex items-center justify-between mb-2">
                                 <div className="flex items-center gap-x-4">
-                                    <h1 className="font-medium text-2xl text-white">Hero section</h1>
-                                    <span className="gradientText ml-1 font-medium">Pro</span>
+                                    <h1 className="font-medium text-2xl text-white max-md:text-xl">Hero section</h1>
+                                    <span className="gradientText ml-1 font-medium max-md:text-sm">Pro</span>
                                 </div>
                                 <div
                                     className="flex items-center justify-center cursor-pointer"
@@ -46,7 +46,7 @@ export default function ContentSection() {
                                     )}
                                 </div>
                             </div>
-                            <p className="text-sm text-grayText">{article.date}</p>
+                            <p className="text-sm text-grayText max-md:text-xs">{article.date}</p>
                         </div>
                     </article>
                 ))}
