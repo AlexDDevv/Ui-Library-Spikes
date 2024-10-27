@@ -11,8 +11,8 @@ type PrincingPlanProps = {
 
 export default function PrincingPlan({ plan, best, price, avantages }: PrincingPlanProps) {
     return (
-        <article className='bg-bgContainer rounded-xl shadow-forCard p-4 min-w-[325px] max-w-[350px] h-full'>
-            <div className='bg-transparent border border-border px-6 py-5 shadow-[inset_0_-10px_30px_-10px_#ffffff1f] rounded-lg mb-5'>
+        <article className='bg-bgContainer rounded-xl shadow-forCard p-4 w-[300px] h-full transition-shadow duration-200 ease-in-out hover:shadow-forCardHover group'>
+            <div className='bg-transparent border border-border px-6 py-5 shadow-[inset_0_-10px_30px_-10px_#ffffff1f] rounded-lg mb-5 transition-colors duration-200 ease-in-out group-hover:border-[#ffffff33]'>
                 <div className='flex items-center justify-between gap-x-5 mb-8'>
                     <h3 className='font-semibold text-white text-lg'>{plan}</h3>
                     {best && (
@@ -30,7 +30,7 @@ export default function PrincingPlan({ plan, best, price, avantages }: PrincingP
             <div>
                 <ul className='pl-6'>
                     {avantages.map(avantage => (
-                        <li key={avantage} className="flex items-center gap-x-2 text-grayText mb-3">
+                        <li key={avantage} className="flex items-center gap-x-2 text-grayText mb-3 transition-colors duration-200 ease-in-ou group-hover:text-white">
                             <Check />
                             {avantage}
                         </li>
