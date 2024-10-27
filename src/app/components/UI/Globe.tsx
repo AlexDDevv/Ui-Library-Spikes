@@ -42,21 +42,21 @@ export default function Globe({
     className?: string;
     config?: COBEOptions;
 }) {
-    let phi = 0;
-    let width = 0;
     const canvasRef = useRef<HTMLCanvasElement>(null);
-    const pointerInteracting = useRef(null);
+    const pointerInteracting = useRef<number | null>(null);
     const pointerInteractionMovement = useRef(0);
     const [r, setR] = useState(0);
+    const [canvasWidth, setCanvasWidth] = useState(0);
+    let phi = 0;
 
-    const updatePointerInteraction = (value: any) => {
+    const updatePointerInteraction = (value: number | null) => {
         pointerInteracting.current = value;
         if (canvasRef.current) {
             canvasRef.current.style.cursor = value ? "grabbing" : "grab";
         }
     };
 
-    const updateMovement = (clientX: any) => {
+    const updateMovement = (clientX: number) => {
         if (pointerInteracting.current !== null) {
             const delta = clientX - pointerInteracting.current;
             pointerInteractionMovement.current = delta;
@@ -68,34 +68,38 @@ export default function Globe({
         (state: Record<string, any>) => {
             if (!pointerInteracting.current) phi += 0.005;
             state.phi = phi + r;
-            state.width = width * 2;
-            state.height = width * 2;
+            state.width = canvasWidth * 2;
+            state.height = canvasWidth * 2;
         },
-        [r],
+        [r, canvasWidth],
     );
 
-    const onResize = () => {
+    const handleResize = () => {
         if (canvasRef.current) {
-            width = canvasRef.current.offsetWidth;
+            setCanvasWidth(canvasRef.current.offsetWidth);
+            phi = 0; // Réinitialise la rotation après redimensionnement
         }
     };
 
     useEffect(() => {
-        window.addEventListener("resize", onResize);
-        onResize();
+        window.addEventListener("resize", handleResize);
+        handleResize(); // Appelle handleResize au montage pour initialiser la largeur
 
         const globe = createGlobe(canvasRef.current!, {
             ...config,
-            width: width * 2,
-            height: width * 2,
+            width: canvasWidth * 2,
+            height: canvasWidth * 2,
             onRender,
         });
 
-        return () => globe.destroy();
-    }, []);
+        return () => {
+            globe.destroy();
+            window.removeEventListener("resize", handleResize);
+        };
+    }, [canvasWidth, config]);
 
     return (
-        <div className="flex items-center justify-center inset-0 aspect-[1/1] w-[350px] h-[350px]">
+        <div className="flex items-center justify-center inset-0 aspect-[1/1] w-[350px] h-[350px] max-md:w-[300px] max-md:h-[300px]">
             <canvas
                 className="h-full w-full flex items-center justify-center [contain:layout_paint_size]"
                 ref={canvasRef}
