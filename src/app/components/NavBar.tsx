@@ -20,7 +20,7 @@ export default function NavBar() {
     };
 
     return (
-        <section className="bg-bgContainer flex flex-col gap-y-6 p-8 pb-28 border-r-2 border-border min-w-[280px]">
+        <section className="bg-bgContainer flex flex-col gap-y-6 p-8 pb-28 border-r-2 border-border min-w-[280px] max-xl:min-w-64 max-md:p-7 max-md:min-w-56 max-sm:border-r-0 max-sm:border-b-2">
             {data.navBarLaterale.map((section, index) => (
                 <NavBarContent
                     key={section.title}
@@ -30,7 +30,7 @@ export default function NavBar() {
                     selectContent={(content) => selectContent(section.title, content)}
                 />
             ))}
-            <button className="flex items-center justify-between bg-card text-upgradeText text-xs font-medium h-8 rounded-md">
+            <button className="flex items-center justify-between bg-card text-upgradeText text-xs font-medium h-8 rounded-md max-sm:w-48 max-sm:mx-auto">
                 <Image
                     src={btnDotLeft}
                     alt="Styled btn"
