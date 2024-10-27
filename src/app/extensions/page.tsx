@@ -8,6 +8,12 @@ import ArticlesContent from '../components/ArticlesContent';
 import { Blocks, SunMoon, ChartNoAxesCombined, ListTodo, TypeOutline, BookA, BadgePoundSterling, SquareCode, Accessibility, Languages } from "lucide-react"
 
 export default function page() {
+    const icons = [
+        Blocks, SunMoon, ChartNoAxesCombined, ListTodo,
+        TypeOutline, BookA, BadgePoundSterling, SquareCode,
+        Accessibility, Languages,
+    ]
+
     return (
         <main className='flex max-sm:flex-col'>
             <NavBar />
@@ -21,23 +27,19 @@ export default function page() {
                             <p className='text-sm text-grayText max-w-[500px] leading-relaxed'>Whether you're automating tasks or analyzing performance, our extensions help you achieve more, faster.</p>
                         </div>
                     </div>
-                    <div className="bg-bgContainer w-1/2 rounded-xl shadow-forCard h-full overflow-hidden p-5 max-lg:w-full max-lg:flex  max-lg:items-center max-lg:justify-center max-mobile:p-4 max-mobile:rounded-lg">
+                    <div className="bg-bgContainer w-1/2 rounded-xl shadow-forCard h-full overflow-hidden p-5 transition-shadow duration-200 ease-in-out hover:shadow-forCardHover max-lg:w-full max-lg:flex  max-lg:items-center max-lg:justify-center max-mobile:p-4 max-mobile:rounded-lg">
                         <Image
                             src={extensionImg}
                             alt="Image avec des icones d'extensions"
                             className='w-full h-full max-lg:hidden'
                         />
                         <div className='hidden w-full text-grayText max-lg:flex max-lg:items-center max-lg:justify-between'>
-                            <Blocks className='h-[5%] w-[5%] cursor-pointer transition duration-200 ease-in-out hover:text-white hover:rotate-[-20deg]' />
-                            <SunMoon className='h-[5%] w-[5%] cursor-pointer transition duration-200 ease-in-out hover:text-white hover:rotate-[-20deg]' />
-                            <ChartNoAxesCombined className='h-[5%] w-[5%] cursor-pointer transition duration-200 ease-in-out hover:text-white hover:rotate-[-20deg]' />
-                            <ListTodo className='h-[5%] w-[5%] cursor-pointer transition duration-200 ease-in-out hover:text-white hover:rotate-[-20deg]' />
-                            <TypeOutline className='h-[5%] w-[5%] cursor-pointer transition duration-200 ease-in-out hover:text-white hover:rotate-[-20deg]' />
-                            <BookA className='h-[5%] w-[5%] cursor-pointer transition duration-200 ease-in-out hover:text-white hover:rotate-[-20deg]' />
-                            <BadgePoundSterling className='h-[5%] w-[5%] cursor-pointer transition duration-200 ease-in-out hover:text-white hover:rotate-[-20deg]' />
-                            <SquareCode className='h-[5%] w-[5%] cursor-pointer transition duration-200 ease-in-out hover:text-white hover:rotate-[-20deg]' />
-                            <Accessibility className='h-[5%] w-[5%] cursor-pointer transition duration-200 ease-in-out hover:text-white hover:rotate-[-20deg]' />
-                            <Languages className='h-[5%] w-[5%] cursor-pointer transition duration-200 ease-in-out hover:text-white hover:rotate-[-20deg]' />
+                            {icons.map((Icon, index) => (
+                                <Icon
+                                    key={index}
+                                    className='h-[5%] w-[5%] cursor-pointer transition duration-200 ease-in-out hover:text-white hover:rotate-[-20deg]'
+                                />
+                            ))}
                         </div>
                     </div>
                 </div>
