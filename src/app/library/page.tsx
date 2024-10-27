@@ -8,15 +8,15 @@ import ContentSection from "../components/ContentSection";
 
 export default function Home() {
     return (
-        <main className="flex">
+        <main className="flex max-sm:flex-col">
             <NavBar />
-            <div className="bg-bgHero w-full p-8 gap-y-8">
-                <section className="flex gap-8 h-[388px] border-b border-border pb-8 mb-8">
-                    <div className="w-1/2 h-full flex flex-col justify-between">
+            <div className="bg-bgHero w-full p-8 max-md:p-7">
+                <section className="flex gap-8 h-[388px] border-b border-border pb-8 mb-8 max-lg:h-80 max-md:pb-7 max-md:mb-7">
+                    <div className="w-1/2 h-full flex flex-col justify-between max-lg:w-full max-lg:gap-8">
                         <div>
                             <div className="flex items-center gap-x-4 mb-6">
-                                <h1 className="font-medium text-2xl text-white">Hero section</h1>
-                                <span className="gradientText ml-1 font-medium">Pro</span>
+                                <h1 className="font-medium text-2xl text-white max-md:text-xl">Hero section</h1>
+                                <span className="gradientText ml-1 font-medium max-md:text-sm">Pro</span>
                             </div>
                             <p className="text-sm text-grayText max-w-[500px]">Detailed header section with heading and graphic/image centred and feature cards on either side.</p>
                         </div>
@@ -43,7 +43,7 @@ export default function Home() {
                             </button>
                         </div>
                     </div>
-                    <div className="w-1/2 bg-card rounded-xl h-full shadow-forCard"></div>
+                    <div className="w-1/2 bg-card rounded-xl h-full shadow-forCard max-lg:hidden"></div>
                 </section>
                 <ContentSection />
             </div>
