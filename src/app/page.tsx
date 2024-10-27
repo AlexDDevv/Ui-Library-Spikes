@@ -5,8 +5,8 @@ import Particles from "./components/UI/Particules";
 export default function Home() {
     return (
         <>
-            <main className="bg-bgHero flex flex-col items-center justify-center flex-1 text-center gap-y-8 relative overflow-hidden  max-sm:gap-y-6">
-                <h1 className="font-semibold text-7xl text-white flex flex-col leading-snug z-50 max-lg:text-6xl max-lg:leading-snug max-md:text-5xl max-md:leading-snug max-sm:text-4xl max-sm:leading-snug max-mobile:text-3xl">
+            <main className="bg-bgHero flex flex-col items-center justify-center flex-1 text-center gap-y-8 relative overflow-hidden  max-sm:gap-y-6 max-mobile:gap-y-5">
+                <h1 className="font-semibold text-7xl text-white flex flex-col leading-snug z-50 max-lg:text-6xl max-lg:leading-snug max-md:text-5xl max-md:leading-snug max-sm:text-4xl max-sm:leading-snug max-mobile:text-2xl">
                     <p>
                         Unlock the
                         <span className="gradientText mx-4">Full Potential</span>
