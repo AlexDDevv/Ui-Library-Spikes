@@ -6,12 +6,12 @@ import data from "../data/data.json"
 
 export default function page() {
     return (
-        <main className='flex'>
+        <main className='flex max-sm:flex-col'>
             <NavBar />
             <section className='bg-bgHero w-full p-8'>
-                <div className='flex gap-8 h-[388px] border-b border-border mb-8 pb-8'>
-                    <div className='w-1/2'>
-                        <h1 className='font-semibold gradientText text-4xl mb-5'>
+                <div className='flex gap-8 border-b border-border mb-8 pb-8 max-lg:flex-col'>
+                    <div className='w-1/2 max-lg:w-full'>
+                        <h1 className='font-semibold gradientText text-4xl mb-5 max-lg:text-3xl'>
                             Join the Paste community
                         </h1>
                         <div className='flex flex-col gap-y-3'>
@@ -20,7 +20,7 @@ export default function page() {
                             <p className='text-sm text-grayText max-w-[500px] leading-relaxed'>Together, we grow, learn, and innovate. Don't miss out on the opportunity to expand your network and skills... be part of something bigger!</p>
                         </div>
                     </div>
-                    <div className="flex items-center justify-center w-1/2 bg-card rounded-xl h-full shadow-forCard overflow-hidden">
+                    <div className="flex items-center justify-center w-1/2 bg-card rounded-xl h-full shadow-forCard overflow-hidden max-lg:w-full">
                         <Globe />
                     </div>
                 </div>
