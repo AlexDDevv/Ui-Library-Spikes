@@ -32,12 +32,24 @@ export default function NavBarContent({
     const pathname = usePathname()
 
     useEffect(() => {
-        if (pathname !== "/library") {
-            setIsOpen(false);
-        } else {
-            setIsOpen(section.isOpen)
-        }
-    }, [pathname]);
+        const handleResize = () => {
+            if (pathname !== "/library") {
+                setIsOpen(false);
+            } else {
+                setIsOpen(section.isOpen)
+
+                if (window.innerWidth <= 640) {
+                    setIsOpen(false);
+                }
+            }
+        };
+
+        handleResize();
+
+        window.addEventListener("resize", handleResize);
+
+        return () => window.removeEventListener("resize", handleResize);
+    }, [pathname, section.isOpen]);
 
     const handleToggle = () => {
         setIsOpen((prev) => !prev);
@@ -73,29 +85,20 @@ export default function NavBarContent({
 
     return (
         <div key={section.title} className="border-b border-dashed border-border">
-            <div className="flex items-center justify-between mb-6 group">
-                <div
-                    className="flex items-center gap-x-2.5 cursor-pointer"
-                    onClick={handleToggle}
-                >
+            <div className="flex items-center justify-between mb-6 group cursor-pointer max-md:mb-4" onClick={handleToggle}>
+                <div className="flex items-center gap-x-2.5">
                     {getIconForSection(section.title)}
                     <h2
                         className={`${isOpen ? "text-white" : "text-grayText"
-                            } uppercase font-medium text-sm transition-colors duration-200 ease-in-out group-hover:text-white`}
+                            } uppercase font-medium text-sm transition-colors duration-200 ease-in-out group-hover:text-white max-md:text-xs`}
                     >
                         {section.title}
                     </h2>
                 </div>
                 {isOpen ? (
-                    <ChevronDown
-                        onClick={handleToggle}
-                        className="text-white h-5 w-5 cursor-pointer"
-                    />
+                    <ChevronDown className="text-white h-5 w-5" />
                 ) : (
-                    <ChevronUp
-                        onClick={handleToggle}
-                        className="text-grayText h-5 w-5 cursor-pointer transition-colors duration-200 ease-in-out group-hover:text-white"
-                    />
+                    <ChevronUp className="text-grayText h-5 w-5 transition-colors duration-200 ease-in-out group-hover:text-white" />
                 )}
             </div>
             {isOpen && (
@@ -104,7 +107,7 @@ export default function NavBarContent({
                         {section.content?.map((item) => (
                             <div
                                 key={item.name}
-                                className="flex items-center gap-x-2.5 mb-6 px-6 cursor-pointer"
+                                className="flex items-center gap-x-2.5 mb-6 px-6 cursor-pointer max-md:mb-4"
                             >
                                 {item.icon && (
                                     <Image
@@ -121,7 +124,7 @@ export default function NavBarContent({
                                     className={`text-sm ${selectedContent === item.name
                                         ? "text-white"
                                         : "text-grayText"
-                                        } transition-colors duration-200 ease-in-out group-hover:text-white hover:text-white`}
+                                        } transition-colors duration-200 ease-in-out group-hover:text-white hover:text-white max-md:text-xs`}
                                     onClick={() => selectContent(item.name)}
                                 >
                                     {item.name}
@@ -130,7 +133,7 @@ export default function NavBarContent({
                         ))}
                     </div>
                     {section.more && (
-                        <p className="text-grayText mb-6">{section.more}</p>
+                        <p className="text-grayText mb-6 max-md:text-sm">{section.more}</p>
                     )}
                 </>
             )}
