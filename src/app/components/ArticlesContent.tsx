@@ -85,7 +85,7 @@ export default function ArticlesContent({ title, text }: ExtensionType) {
         >
             <div className='flex items-center gap-x-4 text-white mb-5'>
                 {pathName === "/community" ? getIconForCommunity(title) : getIconForExtension(title)}
-                <h3 className='font-medium text-lg'>{title}</h3>
+                <h3 className='font-medium text-lg max-mobile:text-base'>{title}</h3>
             </div>
             <div className='flex justify-between gap-x-10'>
                 <p className='text-sm text-grayText leading-relaxed max-w-[200px] transition-colors duration-200 ease-in-out group-hover:text-white'>{text}</p>
