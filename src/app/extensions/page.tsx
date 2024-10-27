@@ -12,7 +12,7 @@ export default function page() {
         <main className='flex max-sm:flex-col'>
             <NavBar />
             <section className='bg-bgHero w-full p-8 max-md:p-7'>
-                <div className='flex gap-8 h-[388px] border-b border-border mb-8 pb-8 max-lg:flex-col max-lg:h-auto'>
+                <div className='flex gap-8 border-b border-border mb-8 pb-8 max-lg:flex-col max-md:mb-7 max-md:pb-7 max-md:gap-7'>
                     <div className='w-1/2 max-lg:w-full'>
                         <h1 className='font-semibold gradientText text-4xl mb-5 max-lg:text-3xl'>Extensions</h1>
                         <div className='flex flex-col gap-y-3'>

@@ -8,8 +8,8 @@ export default function page() {
     return (
         <main className='flex max-sm:flex-col'>
             <NavBar />
-            <section className='bg-bgHero w-full p-8'>
-                <div className='flex gap-8 border-b border-border mb-8 pb-8 max-lg:flex-col'>
+            <section className='bg-bgHero w-full p-8 max-md:p-7'>
+                <div className='flex gap-8 border-b border-border mb-8 pb-8 max-lg:flex-col max-md:mb-7 max-md:pb-7 max-md:gap-7'>
                     <div className='w-1/2 max-lg:w-full'>
                         <h1 className='font-semibold gradientText text-4xl mb-5 max-lg:text-3xl'>
                             Join the Paste community
