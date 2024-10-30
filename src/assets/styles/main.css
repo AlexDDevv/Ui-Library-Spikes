@@ -1,3 +1,12 @@
+html {
+    height: 100%;
+}
+body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
 .gradientText {
     background: linear-gradient(to right, #ff7a00, #ff2900);
     -webkit-background-clip: text;
@@ -21,4 +30,3 @@
 ::-webkit-scrollbar-thumb {
     background: #7E7F81;
 }
-
