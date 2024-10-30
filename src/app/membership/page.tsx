@@ -17,7 +17,7 @@ export default function page() {
                         <div className='flex flex-col gap-y-3'>
                             <p className='text-sm text-grayText max-w-[500px] leading-relaxed'>Join our passionate developer community and unlock access to exclusive component libraries, powerful extensions, and dedicated support.</p>
                             <p className='text-sm text-grayText max-w-[500px] leading-relaxed'>Boost your projects with regular updates and connect with experts to level up your skills.</p>
-                            <p className='text-sm text-grayText max-w-[500px] leading-relaxed'> Whether you're a beginner or a pro, our platform helps you save time and build better, faster!</p>
+                            <p className='text-sm text-grayText max-w-[500px] leading-relaxed'>{`Whether you're a beginner or a pro, our platform helps you save time and build better, faster!`}</p>
                         </div>
                     </div>
                     <div className="flex items-center justify-center w-1/2 h-72 bg-bgContainer rounded-xl border-2 border-border overflow-x-hidden py-6 relative max-lg:w-full max-lg:h-auto">

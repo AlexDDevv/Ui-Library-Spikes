@@ -1,7 +1,6 @@
 import React from 'react'
 import NavBar from "../components/NavBar";
 import extensionImg from "../../assets/img/extension.svg"
-// import extentionsImgMini from "../../assets/img/extensionMini.svg"
 import Image from 'next/image';
 import data from "../data/data.json"
 import ArticlesContent from '../components/ArticlesContent';
@@ -24,7 +23,7 @@ export default function page() {
                         <div className='flex flex-col gap-y-3'>
                             <p className='text-sm text-grayText max-w-[500px] leading-relaxed'>Extensions on our site provide powerful tools to streamline your workflow and boost your projects.</p>
                             <p className='text-sm text-grayText max-w-[500px] leading-relaxed'>With advanced features and enhanced components, you can save time, customize your work, and improve productivity.</p>
-                            <p className='text-sm text-grayText max-w-[500px] leading-relaxed'>Whether you're automating tasks or analyzing performance, our extensions help you achieve more, faster.</p>
+                            <p className='text-sm text-grayText max-w-[500px] leading-relaxed'>{`Whether you're automating tasks or analyzing performance, our extensions help you achieve more, faster.`}</p>
                         </div>
                     </div>
                     <div className="bg-bgContainer w-1/2 rounded-xl shadow-forCard h-full overflow-hidden p-5 transition-shadow duration-200 ease-in-out hover:shadow-forCardHover max-lg:w-full max-lg:flex  max-lg:items-center max-lg:justify-center max-mobile:p-4 max-mobile:rounded-lg">

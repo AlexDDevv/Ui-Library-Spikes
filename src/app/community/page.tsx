@@ -16,8 +16,8 @@ export default function page() {
                         </h1>
                         <div className='flex flex-col gap-y-3'>
                             <p className='text-sm text-grayText max-w-[500px] leading-relaxed'>Join our vibrant community of developers today and take your coding journey to the next level!</p>
-                            <p className='text-sm text-grayText max-w-[500px] leading-relaxed'>Connect with like-minded professionals, share knowledge, and collaborate on exciting projects. Whether you're a seasoned expert or just starting out, you'll find valuable resources, support, and inspiration.</p>
-                            <p className='text-sm text-grayText max-w-[500px] leading-relaxed'>Together, we grow, learn, and innovate. Don't miss out on the opportunity to expand your network and skills... be part of something bigger!</p>
+                            <p className='text-sm text-grayText max-w-[500px] leading-relaxed'>{`Connect with like-minded professionals, share knowledge, and collaborate on exciting projects. Whether you're a seasoned expert or just starting out, you'll find valuable resources, support, and inspiration.`}</p>
+                            <p className='text-sm text-grayText max-w-[500px] leading-relaxed'>{`Together, we grow, learn, and innovate. Don't miss out on the opportunity to expand your network and skills... be part of something bigger!`}</p>
                         </div>
                     </div>
                     <div className="flex items-center justify-center w-1/2 bg-card rounded-xl h-full shadow-forCard overflow-hidden max-lg:w-full">
