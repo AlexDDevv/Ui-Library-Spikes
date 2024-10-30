@@ -2,13 +2,11 @@ import MarqueeCard from "./MarqueeCard";
 import data from "../../data/data.json"
 
 interface MarqueeProps {
-    children?: React.ReactNode;
     repeat?: number;
-    [key: string]: any;
+    [key: string]: unknown;
 }
 
 export default function Marquee({
-    children,
     repeat = 4,
     ...props
 }: MarqueeProps) {
